@@ -1,6 +1,7 @@
 import { Container } from './Container/Container';
 import { Header } from './Header';
 import { InfoBar } from './InfoBar';
+import { MapComponent } from './MapComponent';
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
         <section>
         <Container>
           <InfoBar/>
+          <MapComponent/>
         </Container>
         </section>
       </main>
