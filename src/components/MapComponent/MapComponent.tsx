@@ -17,5 +17,5 @@ export const MapComponent = () => {
     };
   }, []);
 
-  return <div id="map" style={{ height: '100vh', width: '100%' }}></div>;
+  return <div id="map" style={{ height: '300px', width: '300px' }}></div>;
 }
