@@ -9,7 +9,7 @@ function App() {
       </Container>
       <main>
         <Container>
-          <h1 className="text-blue-600">hello</h1>
+          <h1>hello</h1>
         </Container>
       </main>
     </>
