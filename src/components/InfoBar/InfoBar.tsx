@@ -1,15 +1,5 @@
 import React from 'react';
-
-interface GeoData {
-  ip: string;
-  location: {
-    city: string;
-    country: string;
-    postalCode: string;
-    timezone: string;
-  };
-  isp: string;
-}
+import {GeoData} from '../../types'
 
 interface InfoBarProps {
   geoData?: GeoData;

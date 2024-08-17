@@ -4,17 +4,7 @@ import { Container } from './Container/Container';
 import { Header } from './Header';
 import { InfoBar } from './InfoBar';
 import { MapComponent } from './MapComponent';
-
-interface GeoData {
-  ip: string;
-  location: {
-    city: string;
-    country: string;
-    postalCode: string;
-    timezone: string;
-  };
-  isp: string;
-}
+import {GeoData} from '../types'
 
 function App() {
   const [geoData, setGeoData] = useState<GeoData | undefined>(undefined);
