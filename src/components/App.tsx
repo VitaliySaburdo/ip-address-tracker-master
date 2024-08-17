@@ -22,7 +22,7 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const data = await apiService({ ipAddress: '192.212.174.101' });
+        const data = await apiService({ ipAddress: '28.100.174.101' });
         setGeoData(data);
       } catch (error) {
         console.error('Error fetching data:', error);
