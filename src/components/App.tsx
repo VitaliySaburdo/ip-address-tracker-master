@@ -8,24 +8,27 @@ import {GeoData} from '../types'
 
 function App() {
   const [geoData, setGeoData] = useState<GeoData | undefined>(undefined);
+  const [ip, setIp] = useState('');
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const data = await apiService({ ipAddress: '28.100.174.101' });
-        setGeoData(data);
-      } catch (error) {
-        console.error('Error fetching data:', error);
-      }
-    };
+    if (ip) {
+      const fetchData = async () => {
+        try {
+          const data = await apiService({ ipAddress: ip });
+          setGeoData(data);
+        } catch (error) {
+          console.error('Error fetching data:', error);
+        }
+      };
 
-    fetchData();
-  }, []);
+      fetchData();
+    }
+  }, [ip]);
 
   return (
     <>
       <Container>
-        <Header />
+        <Header getIpAddress={setIp} />
       </Container>
       <main>
         <section>

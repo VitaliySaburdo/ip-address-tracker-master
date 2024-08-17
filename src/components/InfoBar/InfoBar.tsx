@@ -6,7 +6,6 @@ interface InfoBarProps {
 }
 
 export const InfoBar: React.FC<InfoBarProps> = ({ geoData }) => {
-  console.log(geoData)
   if (!geoData) {
     return
   }
