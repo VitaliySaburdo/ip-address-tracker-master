@@ -1,6 +1,6 @@
 # Frontend Mentor - IP address tracker solution
 
-![IP address tracker](./images/desktop-preview.jpg) 
+![IP address tracker](./public/images/desktop-preview.jpg) 
 
 ## Table of contents
 
