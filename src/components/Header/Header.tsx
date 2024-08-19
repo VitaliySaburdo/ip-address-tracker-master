@@ -38,11 +38,11 @@ export const Header: React.FC<HeaderProps> = ({getIpAddress}) => {
           className="h-[60px] w-[320px] text-[20px] pl-[15px] pr-[55px] placeholder:text-[13px] rounded-[15px] placeholder:font-gray-lite cursor-pointer xl:pl-[25px] xl:placeholder:text-[20px] xl:w-[550px]"
           placeholder="Search for any IP address or domain"
         />
+      </label>
         <button
           className="absolute top-[-25px] right-0 h-[60px] w-[75px] bg-dark-gray text-white rounded-r-[15px] flex items-center justify-center"
         ><img src={arrow} alt="arrow" />
         </button>
-      </label>
       </form>
     </header>
   );
