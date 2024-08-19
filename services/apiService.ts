@@ -17,6 +17,7 @@ export const apiService = async ({ ipAddress }: ApiParams) => {
     return response.data;
   } catch (error) {
     console.error('Error fetching data:', error);
+    alert('We don`t find anything please enter correct ip address')
     throw error; 
   }
 };

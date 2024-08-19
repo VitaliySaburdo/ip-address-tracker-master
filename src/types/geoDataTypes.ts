@@ -1,7 +1,7 @@
 export interface GeoData {
   ip: string;
   location: {
-      country: string;
+  country: string;
   region: string;
   city: string;
   lat: number;

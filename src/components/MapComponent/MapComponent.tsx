@@ -10,8 +10,8 @@ interface InfoBarProps {
 export const MapComponent: React.FC<InfoBarProps> = ({geoData}) => {
     const {
     location: {
-      lat = 51.505,
-      lng = -0.09
+      lat = 50.450001,
+      lng = 30.523333
     } = {},
   } = geoData || {};
 
@@ -35,5 +35,5 @@ export const MapComponent: React.FC<InfoBarProps> = ({geoData}) => {
     };
   }, [geoData]);
 
-  return <div id="map" className='w-[100%] h-[520px] mt-[-65px] relative z-0'></div>;
+  return <div id="map" className='w-[100%] h-[520px] relative z-0'></div>;
 }

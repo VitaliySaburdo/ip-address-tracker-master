@@ -18,8 +18,8 @@ export const InfoBar: React.FC<InfoBarProps> = ({ geoData }) => {
   } = geoData || {};
 
   return (
-    <div className="w-[1110px] p-[30px] bg-white rounded-xl ml-auto mr-auto mt-[-65px] relative z-20">
-      <ul className="grid grid-cols-4 gap-y-[20px]">
+    <div className="w-[1110px] p-[30px] bg-white rounded-xl ml-auto mr-auto absolute z-40 left-[50%] translate-x-[-50%] bottom-[57%]">
+      <ul className="grid grid-cols-4">
         <li>
           <p className="text-[10px] font-normal text-gray-lite">IP ADDRESS</p>
           <p className="text-xl font-bold">{geoData ? `${ip}` : '-'}</p>
