@@ -1,4 +1,6 @@
 import { useEffect, useState } from 'react';
+import { NotifyContainer } from './NotifyContainer';
+import 'react-toastify/dist/ReactToastify.css';
 import { apiService } from '../../services';
 import { Container } from './Container/Container';
 import { Header } from './Header';
@@ -28,6 +30,7 @@ function App() {
   return (
     <>
       <Container>
+        <NotifyContainer/>
         <Header getIpAddress={setIp} />
       </Container>
       <main>

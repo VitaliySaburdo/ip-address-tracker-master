@@ -7,6 +7,12 @@ interface InfoBarProps {
   geoData?: GeoData;
 }
 
+const mapStyle = `
+  .leaflet-control-zoom {
+    top: 150px;
+    right: -20px;
+  }`
+
 export const MapComponent: React.FC<InfoBarProps> = ({geoData}) => {
     const {
     location: {
@@ -35,5 +41,10 @@ export const MapComponent: React.FC<InfoBarProps> = ({geoData}) => {
     };
   }, [geoData]);
 
-  return <div id="map" className='w-[100%] h-[520px] relative z-0'></div>;
+
+  return  <>
+  <style>{mapStyle}</style>
+  <div id="map" className='w-[100%] h-[520px] relative z-0'></div>;
+  </>
+
 }

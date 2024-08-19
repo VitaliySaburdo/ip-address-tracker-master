@@ -1,3 +1,5 @@
+import { toast } from 'react-toastify';
+
 import axios from 'axios';
 const apiKey = import.meta.env.VITE_IPIFY_API_KEY;
 
@@ -16,8 +18,7 @@ export const apiService = async ({ ipAddress }: ApiParams) => {
     const response = await axios.get(BASE_URL, { params });
     return response.data;
   } catch (error) {
-    console.error('Error fetching data:', error);
-    alert('We don`t find anything please enter correct ip address')
+  toast.warn("We can’t find anything. Please enter the correct IP address.");
     throw error; 
   }
 };

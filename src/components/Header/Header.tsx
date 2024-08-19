@@ -1,5 +1,6 @@
-import arrow from '../../../public/images/icon-arrow.svg';
 import { useState } from 'react';
+import { toast } from 'react-toastify';
+import arrow from '../../../public/images/icon-arrow.svg';
 
 interface HeaderProps {
   getIpAddress: (ip: string) => void;
@@ -15,7 +16,7 @@ export const Header: React.FC<HeaderProps> = ({getIpAddress}) => {
     const ipAddressValue = ipAddressInput?.value || '';
     
     if(ipAddress.trim() === ''){
-    alert('Enter valid ip address')
+      toast.warn('Please enter valid ip address');
     }
 
     setIpAddress(ipAddressValue);
@@ -24,7 +25,7 @@ export const Header: React.FC<HeaderProps> = ({getIpAddress}) => {
   };
 
   return (
-    <header className="bg-[url('/images/pattern-bg-desktop.png')] flex flex-col items-center pt-[35px] pb-[125px]">
+    <header className="bg-[url('/images/pattern-bg-mobile.png')] xl:bg-[url('/images/pattern-bg-desktop.png')] flex flex-col items-center pt-[35px] pb-[125px]">
       <h2 className="text-white font-medium text-[25px] mb-[35px]">IP Address Tracker</h2>
       <form onSubmit={handleSubmit}>
       <label htmlFor="ip" className="relative">
@@ -33,7 +34,7 @@ export const Header: React.FC<HeaderProps> = ({getIpAddress}) => {
         name='ip'
         value={ipAddress}
         onChange={(e) => setIpAddress(e.target.value)}
-          className="h-[60px] w-[550px] text-[20px] pl-[25px] pr-[55px] rounded-[15px] placeholder:font-gray-lite placeholder:text-[20px] cursor-pointer"
+          className="h-[60px] w-[320px] text-[20px] pl-[25px] pr-[55px] rounded-[15px] placeholder:font-gray-lite placeholder:text-[20px] cursor-pointer xl:w-[550px]"
           placeholder="Search for any IP address or domain"
         />
         <button
