@@ -19,6 +19,7 @@ export const InfoBar: React.FC<InfoBarProps> = ({ geoData }) => {
 
   return (
     <div className="w-[320px] p-[30px] bg-white rounded-xl ml-auto mr-auto absolute z-40 left-[50%] translate-x-[-50%] bottom-[46%] xl:w-[1110px] xl:bottom-[57%]">
+      <h2 className='visually-hidden'>InfoBar</h2>
       <ul className="xl:grid grid-cols-4">
         <li>
           <p className="text-center text-[10px] font-normal text-gray-lite xl:text-left">IP ADDRESS</p>
