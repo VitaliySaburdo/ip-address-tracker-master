@@ -1,17 +1,12 @@
 import { useEffect } from 'react';
 import location from '../../../public/images/icon-location.svg';
 import L from 'leaflet';
-import {GeoData} from '../../types'
+import {GeoData} from '../../types';
+import '../../index.css';
 
 interface InfoBarProps {
   geoData?: GeoData;
 }
-
-const mapStyle = `
-  .leaflet-control-zoom {
-    top: 150px;
-    right: -20px;
-  }`
 
 export const MapComponent: React.FC<InfoBarProps> = ({geoData}) => {
     const {
@@ -43,7 +38,6 @@ export const MapComponent: React.FC<InfoBarProps> = ({geoData}) => {
 
 
   return  <>
-  <style>{mapStyle}</style>
   <div id="map" className='w-[100%] h-[520px] relative z-0'></div>;
   </>
 

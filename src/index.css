@@ -23,3 +23,8 @@ body {
   clip: rect(0, 0, 0, 0);
   border: 0;
 }
+
+.leaflet-control-zoom {
+  top: 150px;
+  right: -20px;
+}

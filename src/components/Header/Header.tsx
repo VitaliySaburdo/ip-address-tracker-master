@@ -27,8 +27,8 @@ export const Header: React.FC<HeaderProps> = ({getIpAddress}) => {
   return (
     <header className="bg-[url('/images/pattern-bg-mobile.png')] xl:bg-[url('/images/pattern-bg-desktop.png')] flex flex-col items-center pt-[35px] pb-[125px]">
       <h1 className="text-white font-medium text-[25px] mb-[35px]">IP Address Tracker</h1>
-      <form onSubmit={handleSubmit}>
-      <label htmlFor="ip" className="relative">
+      <form onSubmit={handleSubmit} className="relative">
+      <label htmlFor="ip" >
         <input
         id='ip'
         type="text"
@@ -40,7 +40,7 @@ export const Header: React.FC<HeaderProps> = ({getIpAddress}) => {
         />
       </label>
         <button
-          className="absolute top-[-25px] right-0 h-[60px] w-[75px] bg-dark-gray text-white rounded-r-[15px] flex items-center justify-center"
+          className="absolute top-0 right-0 h-[60px] w-[75px] bg-dark-gray text-white rounded-r-[15px] flex items-center justify-center"
         ><img src={arrow} alt="arrow" />
         </button>
       </form>
