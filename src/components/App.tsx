@@ -34,7 +34,7 @@ function App() {
         <section>
           <Container>
             <InfoBar geoData={geoData} />
-            <MapComponent />
+            <MapComponent geoData={geoData}/>
           </Container>
         </section>
       </main>

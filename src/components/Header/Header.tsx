@@ -7,6 +7,7 @@ interface HeaderProps {
 
 export const Header: React.FC<HeaderProps> = ({getIpAddress}) => {
  const [ipAddress, setIpAddress] = useState<string>('');
+ console.log(ipAddress)
    const handleSubmit = (evt: React.FormEvent<HTMLFormElement>) => {
     evt.preventDefault();
     const form = evt.currentTarget;

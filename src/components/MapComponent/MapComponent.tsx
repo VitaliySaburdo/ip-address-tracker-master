@@ -1,10 +1,22 @@
 import { useEffect } from 'react';
 import location from '../../../public/images/icon-location.svg';
 import L from 'leaflet';
+import {GeoData} from '../../types'
 
-export const MapComponent = () => {
+interface InfoBarProps {
+  geoData?: GeoData;
+}
+
+export const MapComponent: React.FC<InfoBarProps> = ({geoData}) => {
+    const {
+    location: {
+      lat = 51.505,
+      lng = -0.09
+    } = {},
+  } = geoData || {};
+
   useEffect(() => {
-    const map = L.map('map').setView([51.505, -0.09], 13);
+    const map = L.map('map').setView([lat, lng], 13);
 
     const locationIcon = L.icon({
   iconUrl: location,
@@ -16,12 +28,12 @@ export const MapComponent = () => {
       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
     }).addTo(map);
 
-    L.marker([51.5, -0.09], { icon: locationIcon }).addTo(map).openPopup();
+    L.marker([lat, lng], { icon: locationIcon }).addTo(map).openPopup();
 
     return () => {
       map.remove();
     };
-  }, []);
+  }, [geoData]);
 
   return <div id="map" className='w-[100%] h-[520px] mt-[-65px] relative z-0'></div>;
 }

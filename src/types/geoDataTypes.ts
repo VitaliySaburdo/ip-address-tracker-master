@@ -1,5 +1,5 @@
-export interface fullIpRequest {
-    ip: string;
+export interface GeoData {
+  ip: string;
   location: {
       country: string;
   region: string;
@@ -25,14 +25,3 @@ export interface fullIpRequest {
 };
 }
 
-
-export interface GeoData {
-  ip: string;
-  location: {
-    city: string;
-    country: string;
-    postalCode: string;
-    timezone: string;
-  };
-  isp: string;
-}
