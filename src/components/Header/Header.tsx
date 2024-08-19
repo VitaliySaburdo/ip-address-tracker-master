@@ -30,6 +30,7 @@ export const Header: React.FC<HeaderProps> = ({getIpAddress}) => {
       <form onSubmit={handleSubmit}>
       <label htmlFor="ip" className="relative">
         <input
+        id='ip'
         type="text"
         name='ip'
         value={ipAddress}
