@@ -34,7 +34,7 @@ export const Header: React.FC<HeaderProps> = ({getIpAddress}) => {
         name='ip'
         value={ipAddress}
         onChange={(e) => setIpAddress(e.target.value)}
-          className="h-[60px] w-[320px] text-[20px] pl-[15px] pr-[55px] placeholder:text-[14px] rounded-[15px] placeholder:font-gray-lite cursor-pointer xl:pl-[25px] xl:placeholder:text-[20px] xl:w-[550px]"
+          className="h-[60px] w-[320px] text-[20px] pl-[15px] pr-[55px] placeholder:text-[13px] rounded-[15px] placeholder:font-gray-lite cursor-pointer xl:pl-[25px] xl:placeholder:text-[20px] xl:w-[550px]"
           placeholder="Search for any IP address or domain"
         />
         <button
